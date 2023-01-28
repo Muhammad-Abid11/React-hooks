@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import './App.css';
-
+import Home from "./Home"
 function App() {
+  // useState used for "State"
+  // useEffect used for "lifecycle"
+
 
   // in class components state used as
   // constructor(){
@@ -71,6 +74,9 @@ function App() {
 
       <p>Data from object Hook -- {obj.name} and {obj.email} </p>
       <button onClick={objUpdate}>Update Object</button>
+
+      <br /><br /> <h1>Props down</h1>
+      <Home name="Props from App.jsx" email="prop@gmail.com" />
     </div >
   );
 }

@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Home from "./Home"
 function App() {
   // useState used for "State"
-  // useEffect used for "lifecycle"
 
-
+  // -------------X-------------------
   // in class components state used as
   // constructor(){
   //  this.state={
@@ -46,6 +45,30 @@ function App() {
       email: "bilal@gmail.com"
     })
   }
+
+  // -------------X-------------------
+
+  // useEffect used for "lifecycle"
+
+  useEffect(() => {
+    console.log("I will run on every render")
+  })
+
+  useEffect(() => {
+    console.log("I will run only on 1st render")
+  }, [])  // like componentDidMount
+
+  useEffect(() => {
+    console.log("I will run every time when 'name' or 'email' is updated")
+  }, [name, email])
+
+
+  useEffect(() => {
+    return () => {
+      console.log("When Unmount")
+    }
+  })  //like componentWillUnmount
+
   return (
     <div className="App">
       <p>Welcome</p>

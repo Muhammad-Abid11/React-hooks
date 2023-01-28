@@ -19,8 +19,13 @@ function App() {
   //like destructuring
   //[property,function]=useState("Default Value")
   const [email, setEmail] = useState("abidkhan@gmail.com");
-  // we can also used in array and object 
+  // we can also used in array  
   const [arr, setArr] = useState(["car", "lion", "leopard"]);
+  // we can also used in  object 
+  const [obj, setObj] = useState({
+    name: "Ali",
+    email: "Ali@gmail.com"
+  });
 
   const handle = () => {
     setName("Abid")
@@ -30,6 +35,13 @@ function App() {
   const arrUpdate = () => {
     setArr([...arr, "Dog"])
 
+  }
+
+  const objUpdate = () => {
+    setObj({
+      name: "Bilal",
+      email: "bilal@gmail.com"
+    })
   }
   return (
     <div className="App">
@@ -54,6 +66,11 @@ function App() {
         })}
       </ul>
       <button onClick={arrUpdate}>Array Update</button>
+
+      <br />
+
+      <p>Data from object Hook -- {obj.name} and {obj.email} </p>
+      <button onClick={objUpdate}>Update Object</button>
     </div >
   );
 }

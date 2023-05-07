@@ -1,3 +1,6 @@
+// use it by change file name in index.js file
+
+
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Home from "./Home"
@@ -46,34 +49,12 @@ function App() {
     })
   }
 
-  // -------------X-------------------
-
-  // useEffect used for "lifecycle"
-
-  useEffect(() => {
-    console.log("I will run on every render")
-  })
-
-  useEffect(() => {
-    console.log("I will run only on 1st render")
-  }, [])  // like componentDidMount
-
-  useEffect(() => {
-    console.log("I will run every time when 'name' or 'email' is updated")
-  }, [name, email])
-
-
-  useEffect(() => {
-    return () => {
-      console.log("When Unmount")
-    }
-  })  //like componentWillUnmount
 
   return (
     <div className="App">
       <p>Welcome</p>
       <p>React Hooks</p>
-      <p>Hello World ---> {name} Expo!</p>
+      <p>Hello World --- {name} Expo!</p>
       <p>email :   {email} Expo!</p>
       <p>Class 31</p>
       <button onClick={() => setName("Sajid")}>Update Name</button>

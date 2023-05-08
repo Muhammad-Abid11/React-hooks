@@ -13,6 +13,9 @@ export default function Context() {
             <UserContext.Provider value={user}> {/*hum 1 hi prop pass krten hen*/}
                 <Component2 />
             </UserContext.Provider>
+            <button onClick={() => setUser("Abid")}>
+                Press Me
+            </button>
         </div>
     );
 }
@@ -54,6 +57,15 @@ function Component5() {
         <>
             <h1>Component 5</h1>
             <h2>{`Hello ${user} again!`}</h2>
+
         </>
     );
 }
+
+// Reason
+// 1.React Context is a way to manage state globally.
+//   It can be used together with the useState Hook to share state
+//   between deeply nested components more easily than with useState alone.
+
+//2. To do this without Context, we will need to pass the state as
+//   "props" through each nested component.This is called "prop drilling".

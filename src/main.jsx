@@ -1,17 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import Effects from './Effects.jsx'
-import CustomHook from './customHook.jsx'
-import Context from '../Context.jsx'
-import Ref from '../Ref.jsx'
-import Ref2 from '../Ref2.jsx'
+import App from './pages/App.jsx'
+import './main.css'
+import Effects from './pages/Effects.jsx'
+import CustomHook from './pages/customHook.jsx'
+import Context from './pages/Context.jsx'
+import Ref from './pages/Ref.jsx'
+import Ref2 from './pages/Ref2.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <App />
-  // <Effects />
+  <Effects />
   // <CustomHook />
   // <Context />
   // <Ref />
-  <Ref2 />
+  // <Ref2 />
 )

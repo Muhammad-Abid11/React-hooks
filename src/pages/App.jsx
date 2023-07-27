@@ -1,7 +1,6 @@
-// use it by change file name in index.js file
+// use it by change file name in main.js file
 
-
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Home from "./Home"
 function App() {

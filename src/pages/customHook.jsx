@@ -1,4 +1,4 @@
-// use it by change file name in index.js file
+// use it by change file name in main.js file
 
 import { useState, useEffect } from "react";
 
